@@ -1,7 +1,7 @@
 # The 'testshade' executable
 SET ( testshade_srcs testshade.cpp simplerend.cpp )
 ADD_EXECUTABLE ( testshade ${testshade_srcs} testshademain.cpp )
-TARGET_LINK_LIBRARIES ( testshade oslexec oslquery ${OPENIMAGEIO_LIBRARIES} ${OPENEXR_LIBRARIES} ${Boost_LIBRARIES} ${CMAKE_DL_LIBS})
+TARGET_LINK_LIBRARIES ( testshade oslexec oslquery oslcomp ${OPENIMAGEIO_LIBRARIES} ${OCIO_LIBRARIES} ${OPENEXR_LIBRARIES} ${OPTIX_LIBRARIES} ${OPTIX_EXTRA_LIBS} ${Boost_LIBRARIES} ${TIFF_LIBRARIES} ${JPEG_LIBRARIES} ${PNG_LIBRARIES} ${CMAKE_DL_LIBS})
 INSTALL ( TARGETS testshade RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} )
 
 # The 'libtestshade' library
